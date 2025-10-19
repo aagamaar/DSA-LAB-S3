@@ -16,18 +16,18 @@ int main()
     for (int i=0; i<5; i++){
         scanf("%d",&num_arr[i]);
     }
-    
+
     printf("The numbers stored in the array are:\n");
     for (int i=0; i<=4; i++){
         printf("%d\t",num_arr[i]);
     }
 
-    printf("\nThe total sum of elelment in the array is:\n");
+    printf("\nThe total sum of elements in the array is:\n");
     int sum = 0;
     for (int i = 0; i<=4; i++){
         sum+= num_arr[i];
-        return sum;
     }
+    printf("%d",sum);
 
     return 0;
 }

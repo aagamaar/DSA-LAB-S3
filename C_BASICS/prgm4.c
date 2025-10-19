@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sayHello() //Void function does not return any value
+void sayHello(char name[]) //Void function does not return any value
 { 
-    printf("Hello\n");
+    printf("Hello %s\n",name);
 }
 
 int main()
 {
-    sayHello(); //Function call
+    sayHello("Joseph"); //Function call
+    sayHello("Aagama");
+    sayHello("Sanjana");
     return 0;
 }

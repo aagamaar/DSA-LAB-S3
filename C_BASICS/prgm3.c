@@ -4,7 +4,9 @@
 int main()
 {
     /*int number[5] = {1,2,3,4,5};
-    printf("%d\n",number[0]);
+    printf("%d\n",number[0]);//Accessing array element in index 0
+    number[0] = 14;
+    printf("%d\n",number[0]);//Accessing and modifying array element
     printf("%d\n",number[1]);
     printf("%d\n",number[2]);
     printf("%d\n",number[3]);

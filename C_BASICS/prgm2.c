@@ -31,5 +31,15 @@ int main()
         a++;
     }
 
+    printf("************************************************\n");
+    //DO WHILE loop to print numbers from 1 to 5
+    printf("Printing numbers from 1 to 5 using DO WHILE loop:\n");
+    int c =1;
+    do{
+        printf("%d\n",c);
+        c++;
+    }while (c<6);
+    
     return 0;
+
 }

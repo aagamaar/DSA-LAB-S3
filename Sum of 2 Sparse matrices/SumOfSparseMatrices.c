@@ -17,6 +17,7 @@ int main() {
     
     int m, n, tA, tB; // rows, columns, non-zero elements in A and B
 
+    
     // Input Sparse Matrix A
     printf("Enter rows, columns and number of non-zero elements of Matrix A: ");
     scanf("%d %d %d", &A[0].row, &A[0].col, &A[0].value);

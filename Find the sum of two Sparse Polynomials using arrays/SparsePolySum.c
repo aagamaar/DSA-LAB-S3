@@ -14,14 +14,14 @@ void main() {
     int P1[n][2], P2[m][2], P3[n + m][2];
 
     // 2. Input First Polynomial (P1)
-    printf("Enter coefficients and exponents of first polynomial (e.g., 5 3 for 5x^3)\\n");
+    printf("Enter coefficients and exponents of first polynomial (e.g., 5 3 for 5x^3)\n");
     for (i = 0; i < n; i++) {
         printf("P1 Term %d (Coeff Exp): ", i + 1);
         scanf("%d %d", &P1[i][0], &P1[i][1]); 
     }
 
     // 3. Input Second Polynomial (P2)
-    printf("Enter coefficients and exponents of second polynomial\\n");
+    printf("Enter coefficients and exponents of second polynomial\n");
     for (i = 0; i < m; i++) {
         printf("P2 Term %d (Coeff Exp): ", i + 1);
         scanf("%d %d", &P2[i][0], &P2[i][1]);
@@ -80,13 +80,13 @@ void main() {
     }
 
     // 7. Print Resultant Polynomial (Executed ONCE after all addition is done)
-    printf("\nResultant Polynomial (Total terms: %d)\\n", k);
+    printf("\nResultant Polynomial (Total terms: %d)\n", k);
     
     // Reset 'i' for printing P3
     for (i = 0; i < k; i++) {
         // Only print terms where the coefficient is NOT zero
         if (P3[i][0] != 0) {
-            printf("%+dx^%d ", P3[i][0], P3[i][1]); 
+            printf("%dx^%d ", P3[i][0], P3[i][1]); 
         }
     }
     printf("\n");

@@ -33,7 +33,7 @@ void display(struct Term sparse[]) {
     int n = sparse[0].value; // number of non-zero elements
     printf("Row  Col  Value\n");
     for (int i = 0; i <= n; i++) {
-        printf("%3d %4d %5d\n", sparse[i].row, sparse[i].col, sparse[i].value);
+        printf("%d %d %d\n", sparse[i].row, sparse[i].col, sparse[i].value);
     }
 }
 
@@ -64,6 +64,7 @@ int main() {
 
     return 0;
 }
+
 /*
 Output
 Enter number of rows, columns, and non-zero elements: 3 3 3

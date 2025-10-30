@@ -69,7 +69,7 @@ int add(int m, int n, Polynomial a[], Polynomial b[], Polynomial result[]){
 int main(){
 
     int m,n, result_size;
-    printf("Eneter the size of polynomial 1: ");
+    printf("Enter the size of polynomial 1: ");
     scanf("%d",&m);
 
     printf("Enter the size of polynomial 2: ");

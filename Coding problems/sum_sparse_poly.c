@@ -19,16 +19,35 @@ void display(int n, Polynomial p[], int s){
     printf("Polynomial %d : ",s);
     int i, flag = 0;
     for (i=0; i<n; i++){
-        if ((p[i].coeff !=0) && (flag ==1)){
-            printf(" +");
+        if (p[i].coeff ==0){
+            continue;
         }
-        printf("%dx^%d", p[i].coeff, p[i].exp);
+        if (flag ==1){
+            printf(" + ");
+        }
+        printf(" %dx^%d ", p[i].coeff, p[i].exp);
         flag =1;
     }
     if (flag ==0){
         printf("0");
     }
     printf("\n");
+}
+
+void sort(int n, Polynomial p[]){
+    int temp_coeff, temp_exp;
+    for (int i=0; i<n-1; i++){
+        for (int j; j<n-i-1; j++){
+            if (p[j].exp < p[j+1].exp){
+                temp_coeff = p[j].coeff;
+                temp_exp = p[j].exp;
+                p[j].coeff = p[j+1].coeff;
+                p[j].exp = p[j+1].exp;
+                p[j+1].coeff = temp_coeff;
+                p[j+1].exp = temp_exp;
+            }
+        }
+    }
 }
 
 int add(int m, int n, Polynomial a[], Polynomial b[], Polynomial result[]){
@@ -81,6 +100,7 @@ int main(){
     input(n,b,2);
     display(n,b,2);
     result_size = add(m,n,a,b,result);
+    sort(result_size, result);
     display(result_size, result, 3);
     return 0;
 }
